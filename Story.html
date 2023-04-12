@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT and Copilot Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+        }
+        .copyright {
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        #content {
+            display: flex;
+            justify-content: center;
+        }
+
+        .accordion {
+            width: 75%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .accordion-item {
+            width: 100%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .accordion-item:last-child {
+            border: none;
+        }
+
+        .accordion-item button {
+            display: block;
+            width: 100%;
+            background-color: #eee;
+            outline: none;
+            border: none;
+            padding: 15px;
+            text-align: left;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-item button:hover {
+            background-color: #ddd;
+        }
+
+        .accordion-item-content {
+            display: none;
+            padding: 20px;
+            background-color: #f4f4f4;
+            border-top: 1px solid #ddd;
+        }
+
+        table {
+            width: 100%;
+            margin: 10px 0;
+            border-collapse: collapse;
+        }
+
+        th {
+            background-color: #eee;
+            color: black;
+            font-weight: bold;
+            text-align: left;
+            padding: 10px;
+        }
+
+        td {
+            padding: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 5px;
+            cursor: pointer;
+        }
+
+        li.read {
+            color: #E20074;
+        }
+
+        .navigation-panel {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 10px;
+        }
+
+        .navigation-panel button {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation-panel button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="navigation-panel" class="navigation-panel">
+        <button id="btn-up" disabled>&uarr;</button>
+        <button id="btn-down">&darr;</button>
+    </div>
+    <h1>GPT models</h1>
+    <p class ="copyright" >© 2023 Cyril Sadovsky & Michal Kovacik</p>
+    <div id="content">
+        <div class="accordion">
+            <div class="accordion-item">
+                <button><input type="checkbox"> Who we are?</button>
+                <div class="accordion-item-content">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/michalkovacik/">Michal Kovacik - PL in Software engineering</a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/cyril-s-92907566/">Cyril Sadovsky - Senior Software engineer</a>
+                        </li>
+                        <li>
+                            We are not ML experts, but we are curious about GPT models and their potential. We are also interested in AI tools and thier usage in Enterprise. 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button><input type="checkbox"> Introduction to GPT models</button>
+                <div class="accordion-item-content">
+                    <ul>
+                        <li>
+                            Transformers: 
+                            2017 - Google described the concept of transformers - 65 million parameters
+                            2018 - GPT-1 - 110 million parameters
+                            2019 - GPT-2 - 1.5B parameters
+                            2020 - GPT-3 - 175B parameters
+                        </li>
+                        <li>
+                            Describe your background as a .NET developer with no prior experience in Node.JS, HTML, CSS, and JavaScript
+                        </li>
+                        <li>
+                            Explain the challenge of building an app to display data from a JSON file
+                        </li>
+                        <li>
+                            Share how you learned to use ChatGPT effectively with context-boosting techniques, clarifying instructions, and maintaining consistency in codebase references. Next steps - promts and plugins.
+                        </li>
+                        <li>
+                            Mention the successful completion of the app
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button><input type="checkbox">Personal Opinions on Using ChatGPT (Oportunities)</button>
+                <div class="accordion-item-content">
+                    <p>
+                        <ul>
+                            <li>
+                                Potential for improving developers' productivity by offering quick solutions and reducing time spent on research
+                            </li>
+                            <li>
+                                Highlight the opportunity for cross-technology learning, as ChatGPT can provide assistance and guidance in areas where developers lack expertise
+                            </li>
+                            <li>
+                                Best suited for smaller projects or tasks with limited context, but can be used as a starting point for larger projects
+                            </li>
+                            <li>
+                                Can serve as a "Senior Developer" for Junior Developers, provided they know how to work with ChatGPT, enhancing their learning and problem-solving abilities
+                            </li>
+                            <li>
+                                More efficient code reviews, reduced technical debt, and faster delivery of high-quality software 
+                            </li>
+                            <li>
+                                Faster onboarding of new developers, as they can leverage GPT models (not just senior developers) to help them understand the codebase and get up to speed more quickly
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button><input type="checkbox">Mannagment view (Challenges)</button>
+                <div class="accordion-item-content">
+                    <p>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Risk</th>
+                                    <th>Possible Mitigation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><ul><il>Incomplete understanding: Junior developers may not fully understand the code generated by ChatGPT, which could lead to issues in implementing or maintaining the code in the future.</il></ul></td>
+                                    <td><ul><il>Encourage junior developers to understand and analyze the code generated by ChatGPT and ensure proper Code Review with Senior Developers.</td>
+                                </tr>
+                                <tr>
+                                    <td><ul><il>Over-reliance: Developers may become overly reliant on ChatGPT for solutions, which could hinder their development of critical thinking and problem-solving skills. On production enviroment developers will be not able to give ChatGPT whole context.</il></ul></td>
+                                    <td><ul><il>Prevent "Copy-Paste" approch and promote a balanced approach, using ChatGPT as a supplementary tool to support learning and problem-solving abilities and not as an tool for code generation.</il></ul></td>
+                                </tr>
+                                <tr>
+                                    <td><ul><il>Quality control: While ChatGPT can provide helpful code suggestions, it may not always produce the most efficient or best-practice solutions. Developers may lack the expertise to evaluate the quality of the generated code, potentially leading to suboptimal implementations.</il></ul></td>
+                                    <td><ul><il>Implement code review processes, where more senior developers or leads can review the code generated by ChatGPT (Or reversed approch  <a href="https://yam-united.telekom.com/workspaces/ai-insights-stay-up-to-date-on-the-latest-in-artificial-intelligence/apps/blog/articles/view/26250ab6-cf50-43ec-8dea-123fd4114dc1">Link to YandM article - this approch is complementary to SIG.EU</a></a>)</il></ul></td>
+                                </tr>
+                                <tr>
+                                    <td><ul><il>Miscommunication: Developers might not ask the right questions or provide sufficient context to ChatGPT, resulting in incorrect or irrelevant code suggestions.</il></ul></td>
+                                    <td><ul><il>Provide training and guidance for developers on how to work effectively with ChatGPT, including asking clear questions and providing appropriate context</il></ul></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <button><input type="checkbox">Copilot - different approach</button>
+                <div class="accordion-item-content">
+                    <ul>
+                        <li>
+                            <strong>How developers interact with both tools:</strong><br>
+                            ChatGPT: developers communicate with ChatGPT in a more conversational manner, asking questions or requesting code snippets<br>
+                            Copilot: developers work with Copilot within their code editor, where it provides suggestions and autocompletes code based on the context
+                        </li>
+                        <li>
+                            <strong>Capabilities:</strong><br>
+                            ChatGPT: excels in natural language understanding and can provide answers to general questions or coding advice<br>
+                            Copilot: specifically designed for coding tasks, offering more accurate and context-aware code suggestions
+                        </li>
+                        <li>
+                            <strong>User Experience:</strong><br>
+                            ChatGPT: may require more iterations and context-boosting techniques to obtain desired results<br>
+                            Copilot: often provides more accurate code suggestions with less back-and-forth interaction
+                        </li>
+                        <li>
+                            <strong>Integrations:</strong><br>
+                            ChatGPT: can be used through the OpenAI API or integrated into various platforms, but not specifically designed for code editor integration<br>
+                            Copilot: seamlessly integrated into Visual Studio Code and other editors through extensions, providing a more native experience for developers
+                        </li>
+                    </ul>
+                </div>
+            </div> 
+            <div class="accordion-item">
+                <button><input type="checkbox">Backup</button>
+                <div class="accordion-item-content">
+                    <ul>
+                        <li>
+                            <a href="https://github.blog/2022-09-07-research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/">Link to Copilot statistics</a></a>
+                        </li>
+                        <li>
+                            <a href="https://www.demandsage.com/chatgpt-statistics/">Link to ChatGPT statistics</a>
+                        </li>
+                        <li>
+                            Prompt engineering - new buzzword (who will first write book, will be milonare)
+                            <a href="https://yam-united.telekom.com/workspaces/ai-insights-stay-up-to-date-on-the-latest-in-artificial-intelligence/apps/blog/tutorial/view/46a8f7a2-4527-4c5d-b331-b815df03bf5c"></a>
+                        </li>
+                        <li>
+                            Use bouth technology as an tool, not act as an console!</br>
+                            Copilot - autocompletes
+                            GPT models - help with code quality, efficient and reliable delivery
+                            What about our product? I can share just my view.
+                        </li>
+                    </ul>
+                </div> 
+            </div>          
+        </div>
+    </div>
+
+    <script>
+       const accordionItems = document.querySelectorAll('.accordion-item');
+
+        function toggleAccordion() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+
+        accordionItems.forEach(item => {
+            const btn = item.querySelector('button');
+            btn.addEventListener('click', toggleAccordion);
+
+            const checkbox = item.querySelector('input[type="checkbox"]');
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    btn.style.backgroundColor = '#E20074'; // Light magenta when checked
+                } else {
+                    btn.style.backgroundColor = '#eee'; // Original background color when unchecked
+                }
+            });
+        });
+
+        const liItems = document.querySelectorAll('.accordion-item-content li');
+        const btnUp = document.getElementById('btn-up');
+        const btnDown = document.getElementById('btn-down');
+
+        let currentIndex = -1;
+
+        function toggleAccordion() {
+            this.classList.toggle('active');
+            const content = this.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function updateCurrentIndex(index) {
+            if (currentIndex !== -1) {
+                liItems[currentIndex].classList.remove('read');
+            }
+            currentIndex = index;
+            liItems[currentIndex].classList.add('read');
+            btnUp.disabled = currentIndex <= 0;
+            btnDown.disabled = currentIndex >= liItems.length - 1;
+        }
+
+        accordionItems.forEach((item, index) => {
+            const btn = item.querySelector('button');
+            btn.addEventListener('click', toggleAccordion);
+
+            const checkbox = item.querySelector('input[type="checkbox"]');
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    btn.style.backgroundColor = '#E20074'; // Light magenta when checked
+                } else {
+                    btn.style.backgroundColor = '#eee'; // Original background color when unchecked
+                }
+            });
+
+            item.querySelectorAll('li').forEach(li => {
+                li.addEventListener('click', function () {
+                    const index = Array.from(liItems).indexOf(li);
+                    updateCurrentIndex(index);
+                });
+            });
+        });
+
+        btnUp.addEventListener('click', function () {
+            if (currentIndex > 0) {
+                updateCurrentIndex(currentIndex - 1);
+            }
+        });
+
+        btnDown.addEventListener('click', function () {
+            if (currentIndex < liItems.length - 1) {
+                updateCurrentIndex(currentIndex + 1);
+            }
+        });
+
+    </script>
+
+</body>
+
+
+</html>
